@@ -1,0 +1,32 @@
+{
+  "name": "axios-cloudflare",
+  "version": "1.0.0",
+  "description": "An axios interceptor to handle cloudflare browserchecks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freund17/axios-cloudflare.git"
+  },
+  "keywords": [
+    "axios",
+    "cloudflare",
+    "interceptor"
+  ],
+  "author": "freund17",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freund17/axios-cloudflare/issues"
+  },
+  "homepage": "https://github.com/freund17/axios-cloudflare#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "delay": "^2.0.0",
+    "tough-cookie": "^2.3.2"
+  },
+  "peerDependencies": {
+    "axios": "^0.16.1"
+  }
+}
