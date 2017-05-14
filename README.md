@@ -1,10 +1,12 @@
 # axios-cloudflare
 
-An axios hook to handle cloudflare ddos protection / browsercheck
+An axios hook to handle cloudflare ddos protection / browsercheck:
+
+![Example](https://raw.github.com//freund17/axios-cloudflare/master/docs/example.jpg)
 
 ## Usage
 
-```[JavaScript]
+```js
 const axios = require('axios');
 const axiosCloudflare = require('axios-cloudflare');
 
