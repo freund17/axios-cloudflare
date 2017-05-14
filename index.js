@@ -20,8 +20,6 @@ function axiosCloudflare(axios) {
     function interceptCloudflare(response) {
         const $ = response.$;
 
-        const cookie__cfduid = tough.Cookie.parse(response.headers['set-cookie'][0]);
-
         const $form = $('#challenge-form');
         const targetUrl = $form.attr('action');
         const jschl_vc = $form.find('input[name=jschl_vc]').attr('value');
@@ -61,20 +59,17 @@ function axiosCloudflare(axios) {
                 method: 'get',
                 url: url.resolve(urlObj.href, targetUrl),
                 params: { jschl_vc, pass, jschl_answer },
-                headers: {
-                    'Referer': response.config.url
-                },
                 validateStatus: status => status === 302,
                 maxRedirects: 0
-            }).then(response => {
-                response.headers['set-cookie'].forEach(cookieString => {
+            }).then(innerResponse => {
+                innerResponse.headers['set-cookie'].forEach(cookieString => {
                     const cookie = tough.Cookie.parse(cookieString);
 
                     if(cookie.key === 'cf_clearance')
                         clearenceCookies[urlObj.hostname] = cookie.value;
                 });
 
-                return axios.get(response.headers['location']);
+                return axios(response.config);
             });
         });
     }
