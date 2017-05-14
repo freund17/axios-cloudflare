@@ -2,7 +2,7 @@
 
 An axios hook to handle cloudflare ddos protection / browsercheck:
 
-![Example](https://raw.github.com//freund17/axios-cloudflare/master/docs/example.jpg)
+![Example](https://raw.github.com/freund17/axios-cloudflare/master/docs/example.jpg)
 
 ## Usage
 
