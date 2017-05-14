@@ -1,6 +1,6 @@
 {
   "name": "axios-cloudflare",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An axios interceptor to handle cloudflare browserchecks",
   "main": "index.js",
   "scripts": {
